@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-white text-gray-900 font-sans;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-500 hover:bg-primary-600 text-white focus:ring-primary-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white hover:bg-gray-50 border border-gray-200 text-gray-700 focus:ring-primary-500;
+  }
+
+  .btn-success {
+    @apply btn bg-success-500 hover:bg-success-700 text-white focus:ring-success-500;
+  }
+
+  .input {
+    @apply block w-full px-3 py-2 bg-white border border-gray-200 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-gray-900;
+  }
+
+  .select {
+    @apply input appearance-none bg-no-repeat pr-8;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3e%3cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-size: 1.5em 1.5em;
+  }
+
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden;
+  }
+
+  .tab {
+    @apply px-4 py-2 border-b-2 font-medium transition-all duration-200;
+  }
+
+  .tab-active {
+    @apply text-primary-500 border-primary-500;
+  }
+
+  .tab-inactive {
+    @apply text-gray-500 border-transparent hover:text-gray-900 hover:border-gray-300;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply bg-primary-100 text-primary-800;
+  }
+
+  .badge-success {
+    @apply bg-success-100 text-success-700;
+  }
+
+  .badge-warning {
+    @apply bg-warning-100 text-warning-700;
+  }
+
+  .badge-error {
+    @apply bg-error-100 text-error-700;
+  }
+
+  .message-container {
+    @apply bg-gray-50 rounded-md p-4 text-gray-900 border border-gray-200 overflow-y-auto h-48 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none;
+  }
+}
